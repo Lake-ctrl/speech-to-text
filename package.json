@@ -1,0 +1,27 @@
+{
+	"name": "speech-to-text",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Lake-ctrl/speech-to-text.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Lake-ctrl/speech-to-text/issues"
+	},
+	"homepage": "https://github.com/Lake-ctrl/speech-to-text#readme",
+	"devDependencies": {
+		"nodemon": "^2.0.19"
+	},
+	"dependencies": {
+		"axios": "^0.27.2",
+		"dotenv": "^16.0.1"
+	}
+}
