@@ -1,7 +1,4 @@
-require("dotenv").config();
-
-const axios = require("axios").default;
-const API_KEY = process.env.API_KEY;
+const API_KEY = "59be53d11953491782d5d8a1dd365a95";
 
 const form = document.getElementById("form");
 const button = document.getElementById("button");
@@ -17,17 +14,14 @@ const assembly = axios.create({
 
 async function uploadAudio() {
 	const formPayload = new FormData();
-	const file = document.getElementById("file");
+	const file = document.getElementById("fileupload");
 	const audioFile = file.files[0];
 	formPayload.append("audio", audioFile);
 
 	try {
-		const uploadData = await assembly.post("/upload", formPayload, {
-			headers: {
-				"Transfer-Encoding": "chunked",
-			},
-		});
-		return uploadData;
+		const response = await assembly.post("/upload", formPayload, {});
+		console.log(response);
+		return response.data.upload_url;
 	} catch (err) {
 		console.error(err);
 	}
@@ -35,9 +29,21 @@ async function uploadAudio() {
 
 async function getTranscription(audio_URL) {
 	try {
-		const transcription = await assembly.post("/transcript", {
+		const response = await assembly.post("/transcript", {
 			audio_url: audio_URL,
 		});
+		console.log(response);
+		return response.data.id;
+	} catch (err) {
+		console.error(err);
+	}
+}
+
+async function getTranscriptionStatus(id) {
+	try {
+		const response = await assembly.get(`/transcript/${id}`);
+		console.log(response);
+		return response.data.text;
 	} catch (err) {
 		console.error(err);
 	}
@@ -47,8 +53,13 @@ async function handleClick(e) {
 	e.preventDefault();
 	try {
 		const audio_URL = await uploadAudio();
-		const transcription = await getTranscription(audio_url);
-		return transcription;
+		const transcription_id = await getTranscription(audio_URL);
+		const transcription = setTimeout(async () => {
+			const response = await getTranscriptionStatus(transcription_id);
+			console.log(response);
+		}, 20000);
+
+		return transcription_id;
 	} catch (err) {
 		console.error(err);
 	}
@@ -58,5 +69,5 @@ function helloButton() {
 	console.log("Hello");
 }
 
-form.addEventListener("submit", handleClick(e));
+form.addEventListener("submit", (e) => handleClick(e));
 button.addEventListener("click", helloButton);
