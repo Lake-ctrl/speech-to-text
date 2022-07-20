@@ -1,7 +1,6 @@
 API_KEY = "59be53d11953491782d5d8a1dd365a95";
 
 const form = document.getElementById("form");
-const button = document.getElementById("button");
 
 // Setting up the AssemblyAI headers
 const assembly = axios.create({
@@ -79,9 +78,4 @@ async function handleClick(e) {
 	}
 }
 
-function helloButton() {
-	console.log("Hello");
-}
-
 form.addEventListener("submit", (e) => handleClick(e));
-button.addEventListener("click", helloButton);

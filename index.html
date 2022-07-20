@@ -9,14 +9,37 @@
 		/>
 		<title>Speech-to-text</title>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+		/>
 	</head>
 	<body>
-		<form id="form">
-			<label for="fileupload">Select a file:</label>
-			<input type="file" id="fileupload" name="fileupload" />
-			<button type="submit">Analyse</button>
-		</form>
-		<button id="button" type="button">Button</button>
+		<section class="hero has-background-success-light">
+			<div class="hero-body has-text-centered">
+				<h1 class="title">Speech-to-Text</h1>
+
+				<div>
+					<h2 class="subtitle mt-1">
+						A transcription service built using Assembly AI's
+						Speech-to-Text API.
+						<a
+							class="has-text-primary"
+							href="https://www.assemblyai.com/"
+							>Learn more.</a
+						>
+					</h2>
+				</div>
+			</div>
+		</section>
+		<!-- <div>
+			<form id="form">
+				<label for="fileupload">Select a file:</label>
+				<input type="file" id="fileupload" name="fileupload" />
+				<button class="button" type="submit">Analyse</button>
+			</form>
+		</div> -->
+
 		<script src="app.js"></script>
 	</body>
 </html>
