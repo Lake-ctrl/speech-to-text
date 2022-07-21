@@ -9,36 +9,32 @@
 		/>
 		<title>Speech-to-text</title>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-		/>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway">
 	</head>
 	<body>
-		<section class="hero has-background-success-light">
-			<div class="hero-body has-text-centered">
-				<h1 class="title">Speech-to-Text</h1>
+		<section class="hero">
+			<h1 class="heading">Transkript</h1>
 
-				<div>
-					<h2 class="subtitle mt-1">
-						A transcription service built using Assembly AI's
-						Speech-to-Text API.
-						<a
-							class="has-text-primary"
-							href="https://www.assemblyai.com/"
-							>Learn more.</a
-						>
-					</h2>
-				</div>
-			</div>
+			<h2 class="sub-heading">
+				A transcription service built using Assembly AI's
+				Speech-to-Text API.
+				<a href="https://www.assemblyai.com/">Learn more.</a>
+			</h2>
 		</section>
-		<!-- <div>
-			<form id="form">
+
+		<div class="form-container"><section class="form-wrapper">
+			<form class="form" id="form">
 				<label for="fileupload">Select a file:</label>
+
 				<input type="file" id="fileupload" name="fileupload" />
-				<button class="button" type="submit">Analyse</button>
+
+				<button  class="analyse-button" type="submit">
+					Analyse
+				</button>
 			</form>
-		</div> -->
+		</section></div>
+		</body>
 
 		<script src="app.js"></script>
 	</body>
