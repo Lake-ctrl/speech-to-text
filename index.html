@@ -10,7 +10,10 @@
 		<title>Speech-to-text</title>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway">
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Raleway"
+		/>
 	</head>
 	<body>
 		<section class="hero">
@@ -23,18 +26,25 @@
 			</h2>
 		</section>
 
-		<div class="form-container"><section class="form-wrapper">
-			<form class="form" id="form">
-				<label for="fileupload">Select a file:</label>
+		<div class="form-container">
+			<section class="form-wrapper">
+				<form class="form" id="form">
+					<label for="fileupload">Select a file:</label>
 
-				<input type="file" id="fileupload" name="fileupload" />
+					<input type="file" id="fileupload" name="fileupload" />
 
-				<button  class="analyse-button" type="submit">
-					Analyse
-				</button>
-			</form>
-		</section></div>
-		</body>
+					<button class="analyse-button" type="submit">
+						Analyse
+					</button>
+				</form>
+			</section>
+		</div>
+		<section class="text-output-wrapper">
+			<div class="flex-container">
+				<div>Text output:</div>
+				<div class="text-output"></div>
+			</div>
+		</section>
 
 		<script src="app.js"></script>
 	</body>

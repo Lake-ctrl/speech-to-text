@@ -2,6 +2,9 @@ API_KEY = "59be53d11953491782d5d8a1dd365a95";
 
 const form = document.getElementById("form");
 
+
+
+
 // Setting up the AssemblyAI headers
 const assembly = axios.create({
 	baseURL: "https://api.assemblyai.com/v2",
@@ -79,5 +82,3 @@ async function handleClick(e) {
 }
 
 form.addEventListener("submit", (e) => handleClick(e));
-
-

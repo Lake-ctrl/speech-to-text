@@ -16,7 +16,7 @@ body {
 .heading {
 	font-size: 3rem;
 	font-weight: bold;
-       text-shadow: 5px 5px 5px #5fa4928f;
+	text-shadow: 5px 5px 5px #5fa4928f;
 }
 
 .sub-heading {
@@ -45,7 +45,7 @@ form * {
 	border-radius: 0.5rem;
 	cursor: pointer;
 	margin: 0.2rem;
-       font-weight: 600;
+	font-weight: 600;
 }
 
 .form-wrapper {
@@ -60,4 +60,26 @@ form * {
 	display: flex;
 	justify-content: center;
 	margin-top: 15px;
+}
+
+.text-output-wrapper {
+	margin-top: 20px;
+
+	display: flex;
+	justify-content: center;
+}
+
+.flex-container {
+	min-width: 350px;
+	max-width: 70%;
+	width: 1000px;
+	height: auto;
+	
+}
+
+.text-output {
+	margin-top: 5px;
+	border: 1px solid black;
+	height: auto;
+	min-height: 100px;
 }
