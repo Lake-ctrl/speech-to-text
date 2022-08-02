@@ -1,9 +1,7 @@
 API_KEY = "59be53d11953491782d5d8a1dd365a95";
 
 const form = document.getElementById("form");
-
-
-
+const textOutput = document.getElementById("text-output");
 
 // Setting up the AssemblyAI headers
 const assembly = axios.create({
@@ -67,7 +65,9 @@ async function handleClick(e) {
 					break;
 				case "completed":
 					console.log("Transcription complete!");
-					console.log(response.data.text);
+					textOutput.append(response.data.text);
+
+					// console.log(response.data.text);
 					break;
 			}
 			if (response.data.text != null) {

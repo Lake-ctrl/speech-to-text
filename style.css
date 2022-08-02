@@ -7,7 +7,7 @@ body {
 }
 
 .hero {
-	background-image: linear-gradient(#c5faec, white);
+	background-image: linear-gradient(rgb(0, 122, 255), white);
 	color: black;
 	padding: 0.5rem;
 	text-align: center;
@@ -46,8 +46,15 @@ form * {
 	cursor: pointer;
 	margin: 0.2rem;
 	font-weight: 600;
+	cursor: pointer;
+	outline: none;
 }
-
+.analyse-button:hover {
+}
+.analyse-button:active {
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
 .form-wrapper {
 	display: flex;
 	justify-content: center;
@@ -74,7 +81,6 @@ form * {
 	max-width: 70%;
 	width: 1000px;
 	height: auto;
-	
 }
 
 .text-output {
