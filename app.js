@@ -2,6 +2,19 @@ API_KEY = "59be53d11953491782d5d8a1dd365a95";
 
 const form = document.getElementById("form");
 const textOutput = document.getElementById("text-output");
+const loading = document.getElementById("loading");
+
+// Loading progress bar
+const queue = document.createElement("div");
+const processing = document.createElement("div");
+const complete = document.createElement("div");
+
+queue.textContent = "Your audio is being queued";
+queue.id = "queue";
+processing.textContent = "Your audio is being processed";
+processing.id = "processing";
+complete.textContent = "Your transcription is complete";
+complete.id = "complete";
 
 // Setting up the AssemblyAI headers
 const assembly = axios.create({
@@ -59,15 +72,20 @@ async function handleClick(e) {
 			switch (response.data.status) {
 				case "queued":
 					console.log("Your audio is being queued");
+					if (loading.hasChildNodes() === false) {
+						loading.appendChild(queue);
+					}
 					break;
 				case "processing":
 					console.log("Your audio is being processed");
+					if (loading.hasChildNodes() === false) 
+					
 					break;
 				case "completed":
 					console.log("Transcription complete!");
+
 					textOutput.append(response.data.text);
 
-					// console.log(response.data.text);
 					break;
 			}
 			if (response.data.text != null) {

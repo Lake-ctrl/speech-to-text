@@ -3,7 +3,7 @@ body {
 }
 * {
 	font-family: "Raleway", sans-serif;
-	/* border: 1px dashed red; */
+	border: 1px dashed red;
 }
 
 .hero {
@@ -49,8 +49,7 @@ form * {
 	cursor: pointer;
 	outline: none;
 }
-.analyse-button:hover {
-}
+
 .analyse-button:active {
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
@@ -76,6 +75,12 @@ form * {
 	justify-content: center;
 }
 
+#loading {
+	display: flex;
+	align-self: center;
+	height: 30px;
+	margin-top: 3px;
+}
 .flex-container {
 	min-width: 350px;
 	max-width: 70%;
