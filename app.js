@@ -78,26 +78,24 @@ async function handleClick(e) {
 					break;
 				case "processing":
 					console.log("Your audio is being processed");
-					if (loading.hasChildNodes() === true) {
+					if (loading.contains(queue) === true) {
 						queue.replaceWith(processing);
 					} else loading.appendChild(processing);
 
 					break;
 				case "completed":
 					console.log("Transcription complete!");
-					if (loading.hasChildNodes() === true) {
+					if (loading.contains(processing) === true) {
 						processing.replaceWith(complete);
+					} else loading.appendChild(complete);
 
-						textOutput.append(response.data.text);
-						if (response.data.text != null) {
-							clearInterval(checkCompletion);
-						}
-						break;
+					textOutput.append(response.data.text);
+					if (response.data.text != null) {
+						clearInterval(checkCompletion);
 					}
+					break;
 			}
 		}, 1000);
-
-		return transcription_id;
 	} catch (err) {
 		console.error(err);
 	}
