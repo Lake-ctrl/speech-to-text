@@ -13,7 +13,7 @@ queue.textContent = "Your audio is being queued";
 queue.id = "queue";
 processing.textContent = "Your audio is being processed";
 processing.id = "processing";
-complete.textContent = "Your transcription is complete";
+complete.textContent = "Your transcription is complete!";
 complete.id = "complete";
 
 // Setting up the AssemblyAI headers
@@ -72,24 +72,28 @@ async function handleClick(e) {
 			switch (response.data.status) {
 				case "queued":
 					console.log("Your audio is being queued");
-					if (loading.hasChildNodes() === false) {
+					if (loading.contains(queue) === false) {
 						loading.appendChild(queue);
 					}
 					break;
 				case "processing":
 					console.log("Your audio is being processed");
-					if (loading.hasChildNodes() === false) 
-					
+					if (loading.hasChildNodes() === true) {
+						queue.replaceWith(processing);
+					} else loading.appendChild(processing);
+
 					break;
 				case "completed":
 					console.log("Transcription complete!");
+					if (loading.hasChildNodes() === true) {
+						processing.replaceWith(complete);
 
-					textOutput.append(response.data.text);
-
-					break;
-			}
-			if (response.data.text != null) {
-				clearInterval(checkCompletion);
+						textOutput.append(response.data.text);
+						if (response.data.text != null) {
+							clearInterval(checkCompletion);
+						}
+						break;
+					}
 			}
 		}, 1000);
 
