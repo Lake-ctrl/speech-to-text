@@ -4,18 +4,6 @@ const form = document.getElementById("form");
 const textOutput = document.getElementById("text-output");
 const loading = document.getElementById("loading");
 
-// Loading progress bar
-const queue = document.createElement("div");
-const processing = document.createElement("div");
-const complete = document.createElement("div");
-
-queue.textContent = "Your audio is being queued";
-queue.id = "queue";
-processing.textContent = "Your audio is being processed";
-processing.id = "processing";
-complete.textContent = "Your transcription is complete!";
-complete.id = "complete";
-
 // Setting up the AssemblyAI headers
 const assembly = axios.create({
 	baseURL: "https://api.assemblyai.com/v2",
@@ -72,23 +60,18 @@ async function handleClick(e) {
 			switch (response.data.status) {
 				case "queued":
 					console.log("Your audio is being queued");
-					if (loading.contains(queue) === false) {
-						loading.appendChild(queue);
-					}
+
+					loading.textContent = "Your audio is being queued";
 					break;
 				case "processing":
 					console.log("Your audio is being processed");
-					if (loading.contains(queue) === true) {
-						queue.replaceWith(processing);
-					} else loading.appendChild(processing);
 
+					loading.textContent = "Your audio is being processed";
 					break;
 				case "completed":
 					console.log("Transcription complete!");
-					if (loading.contains(processing) === true) {
-						processing.replaceWith(complete);
-					} else loading.appendChild(complete);
 
+					loading.textContent = "Transcription complete!";
 					textOutput.append(response.data.text);
 					if (response.data.text != null) {
 						clearInterval(checkCompletion);

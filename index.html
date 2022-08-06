@@ -27,24 +27,26 @@
 		</section>
 
 		<div class="form-container">
-			<section class="form-wrapper">
-				<form class="form" id="form">
-					<label for="fileupload">Select a file:</label>
+			<form class="form" id="form">
+				<label for="fileupload">Select a file:</label>
 
-					<input type="file" id="fileupload" name="fileupload" />
-					<div id="loading"></div>
-					<button class="analyse-button" type="submit">
-						Analyse
-					</button>
-				</form>
-			</section>
+				<input type="file" id="fileupload" name="fileupload" />
+				<div id="loading"></div>
+				<span class="loader"></span>
+				<button class="analyse-button" type="submit">
+					Analyse
+				</button>
+			</form>
 		</div>
+		
 		<section class="text-output-wrapper">
 			<div class="flex-container">
 				<div>Text output:</div>
 				<div id="text-output"></div>
 			</div>
 		</section>
+		
+		
 
 		<script src="app.js"></script>
 	</body>
