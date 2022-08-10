@@ -3,6 +3,19 @@ API_KEY = "59be53d11953491782d5d8a1dd365a95";
 const form = document.getElementById("form");
 const textOutput = document.getElementById("text-output");
 const loading = document.getElementById("loading");
+const loader = document.getElementById("loader");
+const progress = document.getElementById("progress-bar");
+const progressLabel = document.getElementById("progress-bar-label");
+
+const config = {
+	onUploadProgress: function (progressEvent) {
+		const percentCompleted = Math.round(
+			(progressEvent.loaded / progressEvent.total) * 100
+		);
+		progress.setAttribute("value", percentCompleted);
+		progress.previousElementSibling.textContent = `${percentCompleted}%`;
+	},
+};
 
 // Setting up the AssemblyAI headers
 const assembly = axios.create({
@@ -10,6 +23,7 @@ const assembly = axios.create({
 	headers: {
 		authorization: API_KEY,
 		"content-type": "application/json",
+		"transfer-encoding": "chunked",
 	},
 });
 
@@ -20,7 +34,7 @@ async function uploadAudio() {
 	formPayload.append("audio", audioFile);
 
 	try {
-		const response = await assembly.post("/upload", formPayload, {});
+		const response = await assembly.post("/upload", formPayload, config);
 		console.log(response);
 		return response.data.upload_url;
 	} catch (err) {
@@ -52,6 +66,9 @@ async function getTranscriptionStatus(id) {
 
 async function handleClick(e) {
 	e.preventDefault();
+	progress.style.display = "block";
+	progressLabel.style.display = "block";
+	loading.textContent = "";
 	try {
 		const audio_URL = await uploadAudio();
 		const transcription_id = await createTranscription(audio_URL);
@@ -62,21 +79,33 @@ async function handleClick(e) {
 					console.log("Your audio is being queued");
 
 					loading.textContent = "Your audio is being queued";
+
 					break;
 				case "processing":
 					console.log("Your audio is being processed");
 
 					loading.textContent = "Your audio is being processed";
+					loader.style.display = "block";
+					progress.style.display = "none";
+					progressLabel.style.display = "none";
 					break;
 				case "completed":
 					console.log("Transcription complete!");
 
 					loading.textContent = "Transcription complete!";
+					loader.style.display = "none";
+
 					textOutput.append(response.data.text);
 					if (response.data.text != null) {
 						clearInterval(checkCompletion);
 					}
 					break;
+				case "error":
+					console.log("Error");
+					loading.textContent =
+						"There has been an error, please try again";
+					loader.style.display = "none";
+					clearInterval(checkCompletion);
 			}
 		}, 1000);
 	} catch (err) {
