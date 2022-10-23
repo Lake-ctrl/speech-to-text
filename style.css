@@ -20,7 +20,7 @@ label {
 }
 
 .heading {
-	font-size: 3rem;
+	font-size: 4em;
 	font-weight: bold;
 	text-shadow: 2px 2px 10px black;
 }
@@ -60,8 +60,11 @@ form * {
 }
 
 .analyse-button:active {
-	box-shadow: 0 5px #666;
-	transform: translateY(4px);
+	box-shadow: 0 2px #666;
+	transform: translateY(1px);
+}
+.anaylse-button:hover {
+	background-color: black;
 }
 
 .form-container {
@@ -70,7 +73,7 @@ form * {
 	margin-top: 15px;
 }
 
-.text-output-wrapper {
+.output-text-container {
 	margin-top: 20px;
 	display: flex;
 	justify-content: center;

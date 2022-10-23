@@ -23,7 +23,7 @@ const assembly = axios.create({
 	headers: {
 		authorization: API_KEY,
 		"content-type": "application/json",
-		
+		"transfer-encoding": "chunked",
 	},
 });
 
