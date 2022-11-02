@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Speech-to-text</title>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Raleway"
+		/>
+		<script src="app.js" type="module"></script>
+	</head>
+	<body>
+		<section class="hero">
+			<h1 class="heading">Transkript</h1>
+
+			<h2 class="sub-heading">
+				A transcription service built using Assembly AI's
+				Speech-to-Text API.
+				<a href="https://www.assemblyai.com/">Learn more.</a>
+			</h2>
+		</section>
+
+		<div class="form-container">
+			<form class="form" id="form">
+				<label for="fileupload">Select a file:</label>
+				<input type="file" id="fileupload" name="fileupload" />
+
+				<div id="loading"></div>
+
+				<label id="progress-bar-label" for="progress-bar">0%</label>
+				<progress id="progress-bar" value="0" max="100"></progress>
+
+				<span id="loader"></span>
+
+				<button class="analyse-button" type="submit">
+					Analyse
+				</button>
+			</form>
+		</div>
+
+		<section class="text-output-wrapper">
+			<div class="flex-container">
+				<div>Text output:</div>
+				<div id="text-output"></div>
+			</div>
+		</section>
+	</body>
+</html>

@@ -1,4 +1,4 @@
-API_KEY = "59be53d11953491782d5d8a1dd365a95";
+const API_KEY = process.env.API_KEY;
 
 const form = document.getElementById("form");
 const textOutput = document.getElementById("text-output");
@@ -22,8 +22,6 @@ const assembly = axios.create({
 	baseURL: "https://api.assemblyai.com/v2",
 	headers: {
 		authorization: API_KEY,
-		"content-type": "application/json",
-		"transfer-encoding": "chunked",
 	},
 });
 
