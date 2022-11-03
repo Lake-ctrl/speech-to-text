@@ -72,7 +72,11 @@ form * {
 }
 
 .output-text-container {
-  justify-content: center;
+  width: 400px;
+  border: 1px solid red;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: center;
   margin-top: 20px;
   display: flex;
 }

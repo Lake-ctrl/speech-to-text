@@ -76,7 +76,12 @@ form * {
 .output-text-container {
 	margin-top: 20px;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-content: center;
+	margin: 1.5em;
+	max-width: 80%;
+	border: 1px solid red;
 }
 
 #progress-bar {
