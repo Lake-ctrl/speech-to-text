@@ -1,7 +1,7 @@
 {
 	"name": "speech-to-text",
 	"version": "1.0.0",
-	"source": "./src/app.js",
+	"source": "src/index/html",
 	"description": "",
 	"type": "module",
 	"scripts": {

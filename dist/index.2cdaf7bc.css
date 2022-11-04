@@ -3,6 +3,7 @@ body {
 }
 
 * {
+  border: 1px dashed red;
   font-family: Raleway, sans-serif;
 }
 
@@ -72,12 +73,11 @@ form * {
 }
 
 .output-text-container {
-  width: 400px;
+  max-width: 80%;
   border: 1px solid red;
   flex-direction: column;
-  justify-content: flex-end;
-  align-self: center;
-  margin-top: 20px;
+  place-content: center;
+  margin: 1.5em;
   display: flex;
 }
 
