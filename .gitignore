@@ -2,3 +2,4 @@ test.js
 launch.json
 node_modules
 .env
+.gitignore

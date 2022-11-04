@@ -52,7 +52,7 @@
 93C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\@parcel\diagnostic\src133118435576469621 1
 123C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\dom-serializer\node_modules\entities\lib\encode.d.ts133118435552437475 0
 86C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\mime-db\LICENSE133118365056924389 0
-62C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\dist133118732370725762 1
+62C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\dist133120429835105487 1
 91C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\json5\lib\unicode.js133118435554158596 0
 98C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\supports-color\package.json133118365056914478 0
 96C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\svgo\plugins\prefixIds.js133118435554277629 0
@@ -66,7 +66,7 @@
 121C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\caniuse-lite\data\features\prefers-color-scheme.js133118435563508214 0
 100C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\css-tree\lib\walker\create.js133118435553399707 0
 70C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules133118521618339815 1
-61C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\src133118724722554568 1
+61C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\src133118736556823486 1
 96C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\@parcel\fs\lib\types.d.ts133118435580880550 0
 108C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\terser\lib\compress\native-objects.js133118435554709147 0
 88C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\semver\bin\semver133118365057033521 0
@@ -116,7 +116,7 @@
 100C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\electron-to-chromium\index.js133118435550686586 0
 82C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\nodemon\doc133118365057921353 1
 115C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\caniuse-lite\data\features\css-page-break.js133118435557809156 0
-71C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\src\style.css133118732491539975 0
+71C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\src\style.css133120413219179213 0
 99C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\css-select\lib\attributes.js133118435549605306 0
 92C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\@parcel\utils\LICENSE133118435579868708 0
 124C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\posthtml\node_modules\posthtml-parser\dist\index.d.ts133118435578210571 0
@@ -2475,7 +2475,7 @@
 91C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\@parcel\packager-raw133118435574890280 1
 94C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\fill-range\package.json133118365056929349 0
 100C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\escape-string-regexp\index.js133118435548940667 0
-81C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\dist\index.2cdaf7bc.css133118732370696019 0
+81C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\dist\index.2cdaf7bc.css133120429835021164 0
 90C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\escalade\index.d.ts133118435551083385 0
 102C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\caniuse-lite\data\regions\TH.js133118435564589481 0
 92C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\escalade\package.json133118435549813626 0
@@ -3946,7 +3946,7 @@
 121C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\@parcel\workers\test\integration\workerfarm\ipc.js133118435562610437 0
 125C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\@parcel\workers\test\integration\workerfarm\logging.js133118435562635243 0
 122C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\@parcel\workers\test\integration\workerfarm\ping.js133118435562679889 0
-73C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\dist\index.html133118731284700545 0
+73C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\dist\index.html133120429835021164 0
 142C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\@parcel\workers\test\integration\workerfarm\resolve-shared-reference.js133118435562848526 0
 140C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\@parcel\node-resolver-core\test\fixture\packages\source-alias\dist.js133118435554123873 0
 97C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\@parcel\workers\src\bus.js133118435562446758 0
@@ -4689,6 +4689,6 @@
 80C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\.bin\svgo133118435671278888 0
 84C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\.bin\svgo.ps1133118435671278888 0
 82C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\node_modules\.bin\terser133118435671278888 0
-80C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\dist\index.0641b553.js133118731284819585 0
-84C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\dist\index.0641b553.js.map133118731284923747 0
-85C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\dist\index.2cdaf7bc.css.map133118732370715844 0
+80C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\dist\index.0641b553.js133120429835021164 0
+84C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\dist\index.0641b553.js.map133120429835095558 0
+85C:\Users\arthu\OneDrive\Documents\Projects\speech-to-text\dist\index.2cdaf7bc.css.map133120429835095558 0
